@@ -1,0 +1,590 @@
+body,html{
+  		
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	overflow-x: hidden !important;
+	color: #838282;
+}
+
+ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+a{ 
+	text-decoration: none;
+	color: #2f2f2f;  
+}
+
+a:focus{
+	outline: none;
+	text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+	color: #363636;  
+	font-weight: 700;
+	line-height: 40px;
+	margin: 0;
+	padding-bottom: 10px;  
+}
+
+img{
+ border:none;
+}
+
+.japanese {
+  font-family: "Meiryo", sans-serif;
+}
+
+/* Preloader */
+
+#preloader {
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color:#fff; /* change if the mask should have another color then white */
+  z-index:99999; /* makes sure it stays on top */ 
+}
+
+#status {
+  width:200px;
+  height:200px;
+  position:absolute;
+  left:50%; /* centers the loading animation horizontally one the screen */
+  top:50%; /* centers the loading animation vertically one the screen */
+  background-image:url(assets/images/loader.gif); /* path to your loading animation */
+  background-repeat:no-repeat;
+  background-position:center;
+  margin:-100px 0 0 -100px; /* is width and height divided by two */
+}
+
+/*scrol to top*/
+
+.scrollToTop {
+  bottom: 60px;
+  border-radius: 4px;
+  display: none;
+  font-size: 32px;
+  line-height: 45px;
+  font-weight: bold;
+  height: 50px;
+  position: fixed;
+  right: 50px;
+  text-align: center;
+  text-decoration: none;
+  width: 50px;
+  z-index: 999;
+  color: #fff;    
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  color: #fff;
+  background-color: #363636;
+  border: 2px solid #363636;
+}
+
+.scrollToTop:hover,
+.scrollToTop:focus{
+  background-color: #fff;
+  color: #363636;
+  text-decoration: none;
+  outline: none;
+}
+
+.top-section {
+  background-color: #fff;
+  width: 100%;
+}
+
+.sticky {
+  z-index: 99999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 2px;
+  -webkit-animation: fadeInDown 800ms;
+  -moz-animation: fadeInDown 800ms;
+  -ms-animation: fadeInDown 800ms;
+  -o-animation: fadeInDown 800ms;
+  animation: fadeInDown 800ms;
+  -webkit-backface-visibility: hidden;
+}
+
+
+
+/*--------------------*/
+/* HEADER */
+/*--------------------*/
+
+#header{
+	float: left;
+	display: inline;
+	width: 100%;
+  height: 200px;
+}
+
+.logo_image {
+  display: block;
+  margin: auto;
+  width: 400px;
+  padding: 20px 0;
+  object-fit: contain;
+}
+
+/*--------------------*/
+/* Navbar */
+/*--------------------*/
+
+.navbar {
+  max-height: 50px;
+}
+
+#menu-area{
+	background-color: #fff;
+	display: inline;
+	float: left;
+	width: 100%;
+	position: relative;	
+}
+
+
+#menu-area .navbar-default {
+  background-color: #fff;
+  border-color: #fff;
+  margin-bottom: 0;
+}
+
+.navbar-brand {
+  width: 100px;
+  height: 100px;
+}
+
+
+.navbar-brand > img {
+  display: block;
+  object-fit: none; 
+}
+
+.navbar-center {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+
+.navbar-nav {
+  float: none;
+}
+
+.main-nav li {
+  padding: 0;
+  position: relative;
+}
+
+.navbar-default .navbar-nav > li > a ,
+.navbar-nav > li > a {
+  color: #363636;
+  display: inline-block !important;
+  font-family: "Open Sans",sans-serif;
+  font-size: 14px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-transform: uppercase;
+  width: 100%;
+  font-weight: 400;
+  letter-spacing: 2px;
+  padding-top: 0px;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-nav > li > a:hover, 
+.navbar-nav > li > a:focus {
+	color: #6f72b6;
+  background-color: transparent;
+}
+
+.navbar-nav > li::before {
+  content: '|';
+  position: absolute;
+  left: -3px;
+  top: 3px;
+  color: #9e9e9e;
+  font-size: 12px;
+  font-weight: 400;
+  display: inline-block;
+}
+
+.navbar-nav > li:last-child::after {
+  content: '|';
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  color: #9e9e9e;
+  font-size: 12px;
+  font-weight: 400;
+  display: inline-block;
+}
+
+.main-nav > li > a:hover::before,
+.navbar-default .navbar-nav > .active > a::before,
+.navbar-default .navbar-nav > .open > a:hover::before {
+  width: 100%;
+}
+
+.dropdown-toggle {
+  transition-delay: 0s;
+  transition-duration: 0.35s;
+  transition-property: all;
+  transition-timing-function: ease-in;
+}
+
+.main-nav .dropdown:hover .dropdown-toggle::before{	
+	width: 100%;
+}
+
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-nav > .open > a:hover,
+.navbar-nav > .open > a:focus {
+  background-color: transparent; 
+}
+
+.navbar-nav > li > .dropdown-menu li {
+  padding: 0;
+}
+
+.navbar-nav > li > .dropdown-menu > li > a {
+	color: #333;
+	font-family: "Lato",sans-serif;
+	font-size: 14px;
+	padding: 8px 20px;
+	text-transform: uppercase;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-nav > li > .dropdown-menu > li > a:focus{
+	background-color: transparent;	
+}
+
+/*--------------------*/
+/* ANIMATIONS */
+/*--------------------*/
+
+.animated1 {
+  -webkit-animation: lightSpeedIn 1s ease-in 200ms both;
+  animation: lightSpeedIn 1s ease-in 200ms both;
+}
+
+.animated2 {
+  -webkit-animation: bounceInLeft 2s ease-in-out 800ms both;
+  animation: bounceInLeft 1.5s ease-in-out 800ms both;
+}
+
+
+/*--------------------*/
+/* CONTENT */
+/*--------------------*/
+
+.content {
+  background-color: #fff;
+  position: relative;
+  display: inline-block;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.title-area {
+  display: inline;
+  float: left;
+  padding: 0 150px;
+  text-align: center;
+  width: 100%;
+}
+
+.title-area .title {  
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.title-area .line {
+  background-color: #363636;
+  display: inline-block;
+  height: 2px;
+  width: 300px;
+}
+
+.title-area p {
+  color: #363636;
+  line-height: 25px;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+
+.clearfix {
+  margin-bottom: 50px;
+}
+
+.divider {
+  background-color: #363636;
+  display: inline-block;
+  height: 2px;
+  width: 100%;
+}
+
+/*--------------------*/
+/* LANDING IMAGE */
+/*--------------------*/
+
+.image-landing {
+  width: 100%;
+  height: 600px;
+  background-image: url("assets/images/landing-image.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.image-caption {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -70px;
+  z-index: 1000;
+  text-align: center;
+  width: 100%;
+}
+
+.image-caption h2 {
+  color: #fff;
+  font-size: 52px;
+  font-weight: 300;
+  line-height: 36px;
+  margin-bottom: 15px;
+}
+
+.image-caption button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: 4px solid #fff;
+    border-radius: 8px;
+    cursor: text;
+    overflow: hidden;
+    font-size: 43px;
+    font-weight: 100;
+    color: #fff;
+}
+
+/*--------------------*/
+/* FULL FLOW */
+/*--------------------*/
+
+.flow {
+  position: relative;
+  color: #363636;
+  text-align: center;
+}
+
+.flow-image {
+  padding: 20px 0 10px 0;
+  width: 100%;
+  object-fit: cover;
+}
+
+.flow button {
+  margin-top: 20px;
+  background-color: transparent;
+  border: 2px solid #363636;
+  border-radius: 2px;
+  cursor: pointer;
+  overflow: hidden;
+  font-size: 20px;
+  font-weight: 100;
+  color: #363636;
+}
+
+.flow button i {
+  padding-right: 5px;
+}
+
+/*--------------------*/
+/* FEATURES */
+/*--------------------*/
+
+.features {
+  position: relative;
+  color: #363636;
+  text-align: justify;
+}
+
+.feature-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+/*--------------------*/
+/* PRICES */
+/*--------------------*/
+
+.prices {
+  position: relative;
+  color: #363636;
+  text-align: justify;
+}
+
+.prices img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.prices .description {
+  padding-top: 20px;
+}
+
+.prices .description h4 {
+  font-size: 18px;
+}
+
+.prices .description p {
+  font-size: 14px;
+}
+
+/*--------------------*/
+/* FAQ */
+/*--------------------*/
+
+.faq{
+  position: relative;
+  color: #363636;
+}
+
+.faq-content{
+  display: inline;
+  float: left;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.single-faq {
+  display: inline;
+  float: left;
+  margin-bottom: 30px;
+  padding-left: 80px;
+  position: relative;
+  width: 100%;
+}
+
+.faq-icon { 
+  font-size: 50px;
+  height: 60px;
+  left: 0;
+  line-height: 50px;
+  position: absolute;
+  top: 10px;
+  width: 60px;
+}
+
+.faq-title{
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: uppercase;
+  transition: all 0.5s ease 0s;
+}
+
+.single-faq p {
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.faq button {
+  margin-top: 20px;
+  background-color: transparent;
+  border: 2px solid #363636;
+  border-radius: 2px;
+  cursor: pointer;
+  overflow: hidden;
+  font-size: 20px;
+  font-weight: 100;
+  color: #363636;
+}
+
+.faq button i {
+  padding-right: 5px;
+}
+
+
+/*--------------------*/
+/* FOOTER */
+/*--------------------*/
+
+
+#footer{
+  float: left;
+  padding: 25px 0;
+  width: 100%;
+  background-color: #eee;
+}
+
+.footer-left{
+  display: inline;
+  float: left;
+  width: 100%;
+}
+
+.footer-left p {
+  color: #5c5c5c;
+  font-size: 14px;
+  margin: 0;
+}
+
+.footer-left p a{
+  color: #5c5c5c;
+}
+
+.footer-left p a:hover{
+  text-decoration: none;
+  outline: none;
+}
+
+.footer-right{
+  display: inline;
+  float: left;
+  text-align: right;
+  width: 100%;
+} 
+
+.footer-right a{
+  color: #5c5c5c;
+  font-size: 18px;
+  padding: 0 10px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.footer-image {
+  object-fit: contain;
+  width: 100%;
+  height: 30px;
+}
+
+
+
